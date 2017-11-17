@@ -14,9 +14,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 /* Modules */
-const userRoutes = require('./controllers/userController')(app);
-
-app.use('/', userRoutes);
+require('./controllers/userController')(app);
+require('./controllers/leadController')(app);
 
 const port = 3000;
 app.listen(port);

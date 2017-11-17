@@ -57,5 +57,5 @@ module.exports = (app) => {
     }
   });
 
-  return router;
+  app.use('/', router);
 };
